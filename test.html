@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <h1>FILTRA I LAVORI PER POSIZIONE LAVORATIVA E/O POSIZIONE GEOGRAFICA!</h1>
+    <div class="container">
+        <div>
+            <label>Inserisci il filtro per la posizione lavorativa</label>
+            <input type="text" id="posizioneLavorativa"/>
+        </div>
+        <div>
+            <label>Inserisci il filtro per la posizione geografica</label>
+            <input type="text" id="posizioneGeografica"/>
+        </div>
+    </div>
+    <button onclick="showResults()" class="search">CERCA</button>
+    <div class="results">
+        <!-- qui ci saranno i vari risultati -->
+    </div>
+    <footer>
+        <button onclick="reset()" class="reset">RESET</button>
+        <h4 class="author">Autore: Cosmin Andrei Albu</h4>
+    </footer>
+    <script src="test.js"></script>
+</body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+body {
+    background-color: wheat;
+    font-family: 'Roboto Mono', monospace;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80x;
+    gap: 50px;
+}
+label {
+    display: block;
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+input {
+    width: 100%;
+    border: 2px solid black;
+}
+button {
+    width: 50%;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+.results {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    display: none;
+}
+.result {
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid white;
+}
+h2 {
+    border-bottom: 1px solid white; 
+}
+.boldText {
+    font-weight: bold;
+}
+footer {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    display: none;
+}
+.reset {
+    margin: auto;
+}
+</style>
